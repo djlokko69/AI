@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 // Clean code: CTRL + K + D (In that order)
 
-namespace GoneHead
+namespace GoneHome
 {
     public class FollowEnemy : MonoBehaviour
     {
@@ -13,9 +13,14 @@ namespace GoneHead
 
         private NavMeshAgent agent;
 
+        private Vector3 spawnPoint;
+
         // Use this for initialization
         void Start()
         {
+            // Making a copy of the starting position
+            spawnPoint = transform.position;
+
             agent = GetComponent<NavMeshAgent>();
         }
 
@@ -23,6 +28,12 @@ namespace GoneHead
         void Update()
         {
             agent.SetDestination(target.position);
+        }
+
+        public void Reset()
+        {
+            // Reset position of player to starting position
+            transform.position = spawnPoint;
         }
     }
 }
