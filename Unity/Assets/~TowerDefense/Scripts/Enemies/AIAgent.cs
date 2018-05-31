@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace TowerDefence
+namespace TowerDefense
 {
     public class AIAgent : MonoBehaviour
     {
