@@ -20,6 +20,17 @@ namespace TowerDefense
             health = maxHealth;
         }
 
+        // Gets called when the Gameobject gets disabled
+        void OnDestroy()
+        {
+            // if there is a health slider created
+            if (healthSlider)
+            {
+                // Destroy it
+                Destroy(healthSlider.gameObject);
+            }
+        }
+
         // Converts Enemy world position to Screen position for health bar
         Vector3 GetHealthBarPos()
         {
@@ -51,6 +62,12 @@ namespace TowerDefense
         {
             // Deal damage to enemy
             health -= damage;
+            // Update the Slider
+            if (healthSlider)
+            {
+                // Convert health to a 0-1 value
+                healthSlider.value = health / maxHealth;
+            }
             // If there is no health
             if (health <= 0)
             {

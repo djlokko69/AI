@@ -150,6 +150,9 @@
     <Compile Include="Assets\~TowerDefense\Scripts\Cameras\MouseOrbit.cs" />
     <Compile Include="Assets\~TowerDefense\Scripts\Enemies\AIAgent.cs" />
     <Compile Include="Assets\~TowerDefense\Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Assets\~TowerDefense\Scripts\Helpers\DestroyOnTriger.cs" />
+    <Compile Include="Assets\~TowerDefense\Scripts\Selection\Placeable.cs" />
+    <Compile Include="Assets\~TowerDefense\Scripts\Selection\Selector.cs" />
     <Compile Include="Assets\~TowerDefense\Scripts\Spawners\EnemySpawner.cs" />
     <Compile Include="Assets\~TowerDefense\Scripts\Spawners\Spawner.cs" />
     <Compile Include="Assets\~TowerDefense\Scripts\Towers\Cannon.cs" />
